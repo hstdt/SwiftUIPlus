@@ -18,7 +18,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/shaps80/SwiftUIBackports", from: "2.8.0")
+        .package(url: "https://github.com/hstdt/SwiftUIBackports", branch: "main")
     ],
     targets: [
         .target(name: "SwiftUIPlus", dependencies: ["SwiftUIBackports"])
