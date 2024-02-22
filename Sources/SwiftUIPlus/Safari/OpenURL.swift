@@ -23,7 +23,7 @@ public extension OpenURLAction.Result {
             controller.modalPresentationStyle = .pageSheet
         }
         root.present(controller, animated: true)
-#elseif os(tvOS)
+#elseif os(tvOS) || os(visionOS)
         UIApplication.shared.open(url)
 #else
         WKExtension.shared().openSystemURL(url)
