@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftUIBackports
 
 #if canImport(CoreHaptics)
 import CoreHaptics
@@ -39,7 +40,7 @@ public extension View {
     }
 }
 
-extension ModifiedContent: @unchecked Sendable { }
+extension ModifiedContent: @unchecked @retroactive Sendable { }
 extension ModifiedContent: Feedback where Content: Feedback, Modifier: Feedback {
     /// Performs the specified feedback and any associated feedback (via combined)
     public func perform() async {
